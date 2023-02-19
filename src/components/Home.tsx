@@ -1,6 +1,7 @@
 import photo from 'assets/img/alex.jpeg';
 import { motion } from 'framer-motion';
 import { Logo } from '../constants';
+import bg from 'assets/img/bg.jpg';
 
 const technologies = [
   {
@@ -77,11 +78,11 @@ const TechBubbles = () => {
 const Home = () => {
   return (
     <div className="relative flex -z-10 flex-col md:items-center justify-start md:flex-row md:justify-center h-screen snap-start pt-24 px-6 bg-indigo-100">
-      {/* <img
-        src={background}
+      <img
+        src={bg}
         alt="background"
         className="absolute inset-0 -z-20 object-cover h-full w-full"
-      /> */}
+      />
       <Greeting />
       <motion.div
         className="flex-initial"
@@ -91,7 +92,7 @@ const Home = () => {
         <img
           src={photo}
           alt="home"
-          className="mx-auto rounded-full shadow-lg max-w-[70%] md:max-w-md lg:max-w-lg"
+          className="mx-auto rounded-full shadow max-w-[70%] md:max-w-md lg:max-w-lg"
         />
       </motion.div>
       <TechBubbles />
